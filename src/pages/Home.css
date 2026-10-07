@@ -1,0 +1,2267 @@
+/* =========================================================
+   GALLERY COFFEE
+   CAFÉ & SNACK BAR
+   DIGITAL MENU — HOME
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gallery-black: #0b0b0b;
+  --gallery-black-soft: #121212;
+  --gallery-charcoal: #1a1a1a;
+
+  --gallery-gold: #b8863b;
+  --gallery-gold-dark: #8f6428;
+  --gallery-gold-light: #d7b06a;
+  --gallery-gold-soft: #ead8b4;
+
+  --gallery-cream: #f7f3eb;
+  --gallery-cream-dark: #ece5d8;
+
+  --gallery-white: #ffffff;
+  --gallery-text: #191714;
+  --gallery-muted: #777169;
+  --gallery-border: #ded7ca;
+
+  --shadow-soft:
+    0 15px 45px rgba(20, 17, 12, 0.08);
+
+  --shadow-medium:
+    0 20px 55px rgba(0, 0, 0, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  background: var(--gallery-cream);
+  color: var(--gallery-text);
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  touch-action: manipulation;
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--gallery-cream);
+  color: var(--gallery-text);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.home-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+  min-height: 94px;
+
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.82),
+      rgba(0, 0, 0, 0.30),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.home-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  color: var(--gallery-white);
+
+  text-decoration: none;
+  line-height: 1;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.home-brand:hover {
+  opacity: 0.96;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.home-brand img {
+  display: block;
+
+  width: 70px;
+  height: 70px;
+
+  object-fit: contain;
+  flex-shrink: 0;
+
+  filter:
+    drop-shadow(
+      0 5px 15px rgba(0, 0, 0, 0.42)
+    );
+
+  transition:
+    transform 0.25s ease;
+}
+
+.home-brand:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   BRAND TEXT
+   ========================================================= */
+
+.home-brand span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(255, 255, 255, 0.96);
+}
+
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.home-header-whatsapp {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 0 21px;
+
+  border:
+    1px solid
+    rgba(215, 176, 106, 0.48);
+
+  border-radius: 999px;
+
+  background:
+    rgba(0, 0, 0, 0.24);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.73rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+
+  backdrop-filter: blur(14px);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.home-header-whatsapp:hover {
+  transform: translateY(-2px);
+
+  background:
+    var(--gallery-gold);
+
+  border-color:
+    var(--gallery-gold);
+
+  box-shadow:
+    0 12px 30px
+    rgba(184, 134, 59, 0.30);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.home-hero {
+  position: relative;
+
+  min-height: 790px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.78) 32%,
+      rgba(0, 0, 0, 0.50) 63%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    url("/gallery-coffee-hero.jpg");
+
+  background-size: cover;
+
+  background-position: center center;
+}
+
+
+/* =========================================================
+   HERO DECORATION
+   ========================================================= */
+
+.home-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -230px;
+  bottom: -250px;
+
+  border:
+    1px solid
+    rgba(215, 176, 106, 0.34);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.home-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -145px;
+  bottom: -165px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO OVERLAY
+   ========================================================= */
+
+.home-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 77% 42%,
+      rgba(215, 176, 106, 0.17),
+      transparent 28%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.home-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      690px,
+      calc(100% - 40px)
+    );
+
+  margin-left: 8%;
+
+  padding-top: 65px;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO LABEL
+   ========================================================= */
+
+.home-hero-label {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  margin-bottom: 27px;
+
+  padding-left: 44px;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.32em;
+}
+
+.home-hero-label::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  width: 31px;
+  height: 1px;
+
+  background:
+    var(--gallery-gold-light);
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.home-hero-content h1 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      3.5rem,
+      7vw,
+      5.8rem
+    );
+
+  font-weight: 400;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.055em;
+}
+
+.home-hero-content h1 span {
+  color:
+    var(--gallery-gold-light);
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.home-hero-content > p {
+  max-width: 525px;
+
+  margin:
+    30px 0 37px;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-size: 0.97rem;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.home-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.home-button {
+  min-height: 54px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  padding: 0 28px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.home-button-primary {
+  background:
+    var(--gallery-gold);
+
+  color:
+    #ffffff;
+
+  box-shadow:
+    0 13px 32px
+    rgba(184, 134, 59, 0.30);
+}
+
+.home-button-primary:hover {
+  background:
+    var(--gallery-gold-light);
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 18px 40px
+    rgba(184, 134, 59, 0.38);
+}
+
+.home-button-primary span {
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.home-button-secondary {
+  border:
+    1px solid
+    rgba(215, 176, 106, 0.48);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  color:
+    #ffffff;
+
+  backdrop-filter:
+    blur(10px);
+}
+
+.home-button-secondary:hover {
+  background:
+    rgba(184, 134, 59, 0.20);
+
+  border-color:
+    var(--gallery-gold-light);
+
+  transform:
+    translateY(-3px);
+}
+
+.home-button-secondary span {
+  color:
+    var(--gallery-gold-light);
+
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   HERO SCROLL
+   ========================================================= */
+
+.home-hero-scroll {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 8%;
+  bottom: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color:
+    rgba(255, 255, 255, 0.53);
+
+  font-size: 0.53rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+}
+
+.home-scroll-line {
+  width: 48px;
+
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.32);
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.home-intro {
+  width:
+    min(
+      760px,
+      calc(100% - 40px)
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    115px 0 90px;
+
+  text-align:
+    center;
+}
+
+.home-intro-label {
+  margin-bottom: 15px;
+
+  color:
+    var(--gallery-gold-dark);
+
+  font-size: 0.61rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.28em;
+}
+
+.home-intro h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  color:
+    var(--gallery-black);
+
+  font-size:
+    clamp(
+      2.7rem,
+      5vw,
+      4.1rem
+    );
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.035em;
+}
+
+.home-intro h2 span {
+  color:
+    var(--gallery-gold-dark);
+
+  font-style: italic;
+}
+
+.home-intro p {
+  max-width: 610px;
+
+  margin:
+    25px auto 0;
+
+  color:
+    var(--gallery-muted);
+
+  font-size: 0.92rem;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   EXPERIENCE CARDS
+   ========================================================= */
+
+.home-experience {
+  width:
+    min(
+      1140px,
+      calc(100% - 48px)
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    0 0 110px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.home-experience-card {
+  padding:
+    36px 30px;
+
+  border:
+    1px solid
+    var(--gallery-border);
+
+  background:
+    rgba(255, 255, 255, 0.74);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.home-experience-card:hover {
+  transform:
+    translateY(-6px);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  border-color:
+    rgba(184, 134, 59, 0.42);
+}
+
+.home-experience-card-featured {
+  background:
+    var(--gallery-black);
+
+  color:
+    #ffffff;
+
+  border-color:
+    var(--gallery-black);
+}
+
+.home-experience-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  border:
+    1px solid
+    rgba(184, 134, 59, 0.38);
+
+  border-radius: 50%;
+
+  color:
+    var(--gallery-gold);
+
+  font-size: 1.15rem;
+}
+
+.home-experience-card > span {
+  display: block;
+
+  margin-bottom: 11px;
+
+  color:
+    var(--gallery-gold-dark);
+
+  font-size: 0.57rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.22em;
+}
+
+.home-experience-card-featured > span {
+  color:
+    var(--gallery-gold-light);
+}
+
+.home-experience-card h3 {
+  margin:
+    0 0 14px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  color:
+    var(--gallery-black);
+
+  font-size: 1.55rem;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+}
+
+.home-experience-card-featured h3 {
+  color:
+    #ffffff;
+}
+
+.home-experience-card p {
+  margin:
+    0 0 25px;
+
+  color:
+    var(--gallery-muted);
+
+  font-size: 0.79rem;
+
+  line-height: 1.7;
+}
+
+.home-experience-card-featured p {
+  color:
+    rgba(255, 255, 255, 0.62);
+}
+
+.home-experience-card a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color:
+    var(--gallery-gold-dark);
+
+  text-decoration: none;
+
+  font-size: 0.71rem;
+
+  font-weight: 800;
+}
+
+.home-experience-card-featured a {
+  color:
+    var(--gallery-gold-light);
+}
+
+.home-experience-card a span {
+  font-size: 1rem;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.home-experience-card a:hover span {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   ART
+   ========================================================= */
+
+.home-art {
+  position: relative;
+
+  min-height: 590px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94),
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.28)
+    ),
+    url("/gallery-coffee-art.jpg");
+
+  background-size:
+    cover;
+
+  background-position:
+    center;
+}
+
+.home-art-content {
+  position: relative;
+
+  z-index: 2;
+
+  width:
+    min(
+      600px,
+      calc(100% - 40px)
+    );
+
+  margin-left: 8%;
+
+  color:
+    #ffffff;
+}
+
+.home-art-label {
+  display: block;
+
+  margin-bottom: 22px;
+
+  color:
+    var(--gallery-gold-light);
+
+  font-size: 0.61rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.28em;
+}
+
+.home-art h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      3rem,
+      6vw,
+      5rem
+    );
+
+  font-weight: 400;
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.home-art h2 span {
+  color:
+    var(--gallery-gold-light);
+
+  font-style: italic;
+}
+
+.home-art p {
+  max-width: 500px;
+
+  margin:
+    27px 0 31px;
+
+  color:
+    rgba(255, 255, 255, 0.70);
+
+  font-size: 0.91rem;
+
+  line-height: 1.8;
+}
+
+.home-art-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  min-height: 51px;
+
+  padding:
+    0 25px;
+
+  border:
+    1px solid
+    rgba(215, 176, 106, 0.55);
+
+  border-radius: 999px;
+
+  background:
+    rgba(184, 134, 59, 0.13);
+
+  color:
+    #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.73rem;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.home-art-button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    var(--gallery-gold);
+
+  border-color:
+    var(--gallery-gold);
+}
+
+.home-art-button span {
+  color:
+    var(--gallery-gold-light);
+}
+
+.home-art-button:hover span {
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   VISITE-NOS
+   ========================================================= */
+
+.home-visit {
+  width:
+    min(
+      1140px,
+      calc(100% - 48px)
+    );
+
+  margin:
+    0 auto;
+
+  padding:
+    112px 0 118px;
+}
+
+.home-visit-header {
+  text-align:
+    center;
+
+  margin-bottom:
+    58px;
+}
+
+.home-visit-header > span {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color:
+    var(--gallery-gold-dark);
+
+  font-size: 0.61rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.28em;
+}
+
+.home-visit-header h2 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  color:
+    var(--gallery-black);
+
+  font-size:
+    clamp(
+      2.5rem,
+      5vw,
+      3.7rem
+    );
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.home-visit-header h2 span {
+  color:
+    var(--gallery-gold-dark);
+}
+
+.home-visit-header p {
+  max-width: 540px;
+
+  margin:
+    18px auto 0;
+
+  color:
+    var(--gallery-muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   VISIT CARDS
+   ========================================================= */
+
+.home-visit-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+.home-visit-card {
+  min-width: 0;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap: 17px;
+
+  padding:
+    27px;
+
+  border:
+    1px solid
+    var(--gallery-border);
+
+  border-radius:
+    18px;
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  box-shadow:
+    0 4px 20px
+    rgba(20, 17, 12, 0.025);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.home-visit-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(184, 134, 59, 0.38);
+
+  box-shadow:
+    var(--shadow-soft);
+}
+
+
+/* =========================================================
+   VISIT ICON
+   ========================================================= */
+
+.home-visit-icon {
+  width: 50px;
+  height: 50px;
+
+  flex:
+    0 0 50px;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  border-radius:
+    15px;
+
+  background:
+    #f0e7d6;
+
+  color:
+    var(--gallery-gold-dark);
+
+  font-size:
+    1.15rem;
+}
+
+
+/* =========================================================
+   VISIT TEXT
+   ========================================================= */
+
+.home-visit-card > div:last-child {
+  min-width: 0;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap: 5px;
+}
+
+.home-visit-card > div:last-child > span {
+  color:
+    #8a8278;
+
+  font-size:
+    0.54rem;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.17em;
+}
+
+.home-visit-card h3 {
+  margin:
+    0;
+
+  color:
+    var(--gallery-black);
+
+  font-size:
+    0.92rem;
+
+  font-weight:
+    800;
+
+  line-height:
+    1.3;
+}
+
+.home-visit-card p {
+  margin:
+    0;
+
+  color:
+    #7b756e;
+
+  font-size:
+    0.72rem;
+
+  line-height:
+    1.45;
+}
+
+
+/* =========================================================
+   VISIT BUTTON
+   ========================================================= */
+
+.home-visit-action {
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  margin-top:
+    38px;
+}
+
+.home-visit-action a {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    13px;
+
+  min-height:
+    49px;
+
+  padding:
+    0 25px;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--gallery-black);
+
+  color:
+    #ffffff;
+
+  text-decoration:
+    none;
+
+  font-size:
+    0.74rem;
+
+  font-weight:
+    800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.home-visit-action a:hover {
+  background:
+    var(--gallery-gold);
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 11px 27px
+    rgba(184, 134, 59, 0.25);
+}
+
+.home-visit-action a span {
+  color:
+    var(--gallery-gold-light);
+
+  font-size:
+    1rem;
+}
+
+.home-visit-action a:hover span {
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   FEEDBACK
+   ========================================================= */
+
+.home-feedback {
+  width: 100%;
+
+  padding:
+    105px 20px;
+
+  background:
+    var(--gallery-black);
+
+  color:
+    #ffffff;
+
+  text-align:
+    center;
+}
+
+.home-feedback-inner {
+  width:
+    min(
+      700px,
+      100%
+    );
+
+  margin:
+    0 auto;
+}
+
+.home-feedback-label {
+  display: block;
+
+  margin-bottom:
+    17px;
+
+  color:
+    var(--gallery-gold-light);
+
+  font-size:
+    0.60rem;
+
+  font-weight:
+    900;
+
+  letter-spacing:
+    0.27em;
+}
+
+.home-feedback h2 {
+  margin:
+    0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4.2rem
+    );
+
+  font-weight:
+    400;
+
+  line-height:
+    1.02;
+}
+
+.home-feedback h2 span {
+  color:
+    var(--gallery-gold-light);
+
+  font-style:
+    italic;
+}
+
+.home-feedback p {
+  max-width:
+    510px;
+
+  margin:
+    23px auto 30px;
+
+  color:
+    rgba(255, 255, 255, 0.63);
+
+  font-size:
+    0.88rem;
+
+  line-height:
+    1.75;
+}
+
+.home-feedback-button {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    13px;
+
+  min-height:
+    51px;
+
+  padding:
+    0 26px;
+
+  border:
+    1px solid
+    var(--gallery-gold);
+
+  border-radius:
+    999px;
+
+  background:
+    var(--gallery-gold);
+
+  color:
+    #ffffff;
+
+  text-decoration:
+    none;
+
+  font-size:
+    0.74rem;
+
+  font-weight:
+    800;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.home-feedback-button:hover {
+  transform:
+    translateY(-3px);
+
+  background:
+    var(--gallery-gold-light);
+}
+
+.home-feedback-button span {
+  font-size:
+    1rem;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.home-footer {
+  width: 100%;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items:
+    center;
+
+  gap:
+    30px;
+
+  padding:
+    43px 5%;
+
+  background:
+    #050505;
+
+  color:
+    #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+   ========================================================= */
+
+.home-footer-brand {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    13px;
+}
+
+.home-footer-brand img {
+  width:
+    48px;
+
+  height:
+    48px;
+
+  object-fit:
+    contain;
+}
+
+.home-footer-brand > div {
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    7px;
+}
+
+.home-footer-brand strong {
+  color:
+    #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    0.92rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.10em;
+}
+
+.home-footer-brand span {
+  color:
+    rgba(255, 255, 255, 0.52);
+
+  font-size:
+    0.69rem;
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.home-footer-links {
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    25px;
+}
+
+.home-footer-links a {
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  text-decoration:
+    none;
+
+  font-size:
+    0.71rem;
+
+  font-weight:
+    700;
+
+  transition:
+    color 0.2s ease;
+}
+
+.home-footer-links a:hover {
+  color:
+    var(--gallery-gold-light);
+}
+
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.home-footer-copy {
+  justify-self:
+    end;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+
+  font-size:
+    0.64rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .home-header {
+    padding:
+      0 4%;
+  }
+
+  .home-brand {
+    gap:
+      10px;
+  }
+
+  .home-hero {
+    background-position:
+      68% center;
+  }
+
+  .home-hero-content {
+    margin-left:
+      6%;
+  }
+
+  .home-experience {
+    grid-template-columns:
+      1fr;
+  }
+
+  .home-visit-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .home-visit-card {
+    padding:
+      21px;
+  }
+
+  .home-footer {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .home-footer-copy {
+    justify-self:
+      start;
+
+    grid-column:
+      1 / -1;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .home-header {
+    min-height:
+      72px;
+
+    padding:
+      0 20px;
+  }
+
+  .home-brand {
+    gap:
+      8px;
+  }
+
+  .home-brand img {
+    width:
+      48px;
+
+    height:
+      48px;
+  }
+
+  .home-brand span {
+    font-size:
+      0.72rem;
+  }
+
+  .home-header-whatsapp {
+    min-height:
+      38px;
+
+    padding:
+      0 13px;
+
+    font-size:
+      0.64rem;
+  }
+
+
+  /* HERO */
+
+  .home-hero {
+    min-height:
+      700px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(0, 0, 0, 0.72) 40%,
+        rgba(0, 0, 0, 0.38) 76%,
+        rgba(0, 0, 0, 0.20) 100%
+      ),
+      url("/gallery-coffee-hero.jpg");
+
+    background-position:
+      70% center;
+
+    background-size:
+      cover;
+  }
+
+  .home-hero-content {
+    width:
+      calc(100% - 40px);
+
+    margin:
+      0 20px;
+
+    padding-top:
+      72px;
+  }
+
+  .home-hero-label {
+    margin-bottom:
+      20px;
+
+    padding-left:
+      30px;
+
+    font-size:
+      0.55rem;
+
+    letter-spacing:
+      0.20em;
+  }
+
+  .home-hero-label::before {
+    width:
+      22px;
+  }
+
+  .home-hero-content h1 {
+    font-size:
+      clamp(
+        3rem,
+        14vw,
+        4.35rem
+      );
+
+    letter-spacing:
+      -0.045em;
+  }
+
+  .home-hero-content > p {
+    max-width:
+      390px;
+
+    margin:
+      22px 0 29px;
+
+    font-size:
+      0.84rem;
+
+    line-height:
+      1.7;
+  }
+
+  .home-hero-actions {
+    width:
+      100%;
+
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+
+    gap:
+      10px;
+  }
+
+  .home-button {
+    width:
+      100%;
+
+    min-height:
+      52px;
+
+    font-size:
+      0.75rem;
+  }
+
+  .home-hero-scroll {
+    left:
+      20px;
+
+    bottom:
+      25px;
+  }
+
+
+  /* INTRO */
+
+  .home-intro {
+    width:
+      calc(100% - 34px);
+
+    padding:
+      75px 0 65px;
+  }
+
+  .home-intro h2 {
+    font-size:
+      2.55rem;
+  }
+
+  .home-intro p {
+    font-size:
+      0.82rem;
+  }
+
+
+  /* EXPERIENCE */
+
+  .home-experience {
+    width:
+      calc(100% - 32px);
+
+    padding:
+      0 0 75px;
+
+    gap:
+      11px;
+  }
+
+  .home-experience-card {
+    padding:
+      27px 23px;
+  }
+
+  .home-experience-card h3 {
+    font-size:
+      1.4rem;
+  }
+
+
+  /* ART */
+
+  .home-art {
+    min-height:
+      610px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.62)
+      ),
+      url("/gallery-coffee-art.jpg");
+
+    background-position:
+      center;
+
+    background-size:
+      cover;
+  }
+
+  .home-art-content {
+    width:
+      calc(100% - 40px);
+
+    margin:
+      0 20px;
+  }
+
+  .home-art h2 {
+    font-size:
+      3.25rem;
+  }
+
+  .home-art p {
+    font-size:
+      0.82rem;
+  }
+
+  .home-art-button {
+    width:
+      100%;
+  }
+
+
+  /* VISIT */
+
+  .home-visit {
+    width:
+      calc(100% - 32px);
+
+    padding:
+      72px 0;
+  }
+
+  .home-visit-header {
+    margin-bottom:
+      36px;
+  }
+
+  .home-visit-header > span {
+    font-size:
+      0.54rem;
+
+    letter-spacing:
+      0.20em;
+  }
+
+  .home-visit-header h2 {
+    font-size:
+      2.55rem;
+  }
+
+  .home-visit-header p {
+    max-width:
+      350px;
+
+    font-size:
+      0.81rem;
+  }
+
+  .home-visit-grid {
+    gap:
+      10px;
+  }
+
+  .home-visit-card {
+    padding:
+      17px;
+
+    gap:
+      13px;
+
+    border-radius:
+      15px;
+  }
+
+  .home-visit-icon {
+    width:
+      43px;
+
+    height:
+      43px;
+
+    flex-basis:
+      43px;
+
+    border-radius:
+      12px;
+  }
+
+  .home-visit-card > div:last-child > span {
+    font-size:
+      0.50rem;
+  }
+
+  .home-visit-card h3 {
+    font-size:
+      0.83rem;
+  }
+
+  .home-visit-card p {
+    font-size:
+      0.67rem;
+  }
+
+  .home-visit-action {
+    margin-top:
+      25px;
+  }
+
+  .home-visit-action a {
+    width:
+      100%;
+
+    min-height:
+      49px;
+  }
+
+
+  /* FEEDBACK */
+
+  .home-feedback {
+    padding:
+      75px 20px;
+  }
+
+  .home-feedback h2 {
+    font-size:
+      2.65rem;
+  }
+
+  .home-feedback p {
+    font-size:
+      0.80rem;
+  }
+
+  .home-feedback-button {
+    width:
+      100%;
+  }
+
+
+  /* FOOTER */
+
+  .home-footer {
+    display:
+      flex;
+
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+    gap:
+      20px;
+
+    padding:
+      31px 20px;
+  }
+
+  .home-footer-links {
+    width:
+      100%;
+
+    flex-wrap:
+      wrap;
+
+    gap:
+      16px 21px;
+  }
+
+  .home-footer-copy {
+    width:
+      100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+  .home-header {
+    padding:
+      0 15px;
+  }
+
+  .home-brand {
+    gap:
+      7px;
+  }
+
+  .home-brand img {
+    width:
+      44px;
+
+    height:
+      44px;
+  }
+
+  .home-brand span {
+    font-size:
+      0.68rem;
+  }
+
+  .home-header-whatsapp {
+    padding:
+      0 10px;
+
+    font-size:
+      0.59rem;
+  }
+
+
+  .home-hero {
+    min-height:
+      660px;
+
+    background-position:
+      78% center;
+  }
+
+  .home-hero-content {
+    width:
+      calc(100% - 30px);
+
+    margin:
+      0 15px;
+
+    padding-top:
+      60px;
+  }
+
+  .home-hero-content h1 {
+    font-size:
+      2.85rem;
+  }
+
+  .home-hero-content > p {
+    font-size:
+      0.79rem;
+  }
+
+  .home-button {
+    min-height:
+      49px;
+
+    padding:
+      0 18px;
+  }
+
+
+  .home-intro {
+    width:
+      calc(100% - 24px);
+
+    padding:
+      60px 0 50px;
+  }
+
+  .home-intro h2 {
+    font-size:
+      2.2rem;
+  }
+
+
+  .home-experience {
+    width:
+      calc(100% - 24px);
+  }
+
+
+  .home-art h2 {
+    font-size:
+      2.85rem;
+  }
+
+
+  .home-visit {
+    width:
+      calc(100% - 24px);
+
+    padding:
+      56px 0;
+  }
+
+  .home-visit-header h2 {
+    font-size:
+      2.2rem;
+  }
+
+  .home-visit-card {
+    padding:
+      14px;
+  }
+
+  .home-visit-icon {
+    width:
+      39px;
+
+    height:
+      39px;
+
+    flex-basis:
+      39px;
+
+    font-size:
+      0.9rem;
+  }
+
+
+  .home-feedback {
+    padding:
+      60px 15px;
+  }
+
+  .home-feedback h2 {
+    font-size:
+      2.25rem;
+  }
+
+
+  .home-footer {
+    padding:
+      28px 15px;
+  }
+}
